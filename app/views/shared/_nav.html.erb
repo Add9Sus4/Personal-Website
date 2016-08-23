@@ -17,7 +17,11 @@
         <li id="software"><%= link_to "Other Software", pages_software_path %></li>
         <li id="music"><%= link_to "Music", pages_music_path %></li>
         <li id="blog"><%= link_to "Blog", pages_blog_path %></li>
-        <li id="signup"><%= link_to "Sign Up", signup_path %></li>
+        <% if logged_in? %>
+        <li id="logout"><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <% else %>
+        <li id="login"><%= link_to "Log in", login_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
