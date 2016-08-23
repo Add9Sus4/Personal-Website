@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>AddPersonalWebsite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <div class="container-fluid">
+    <div class="col-sm-3">
+      <div id="logo">
+        <%= image_tag("crystalskies.jpg", :id => "logo") %>
+      </div>
+      <div id="sidebar">
+        <p><strong>Social media links:</strong></p>
+        <p><%= link_to "Facebook", "https://www.facebook.com/aaron.dawson.902", :target => "_blank" %></p>
+        <p><%= link_to "Twitter", "https://twitter.com/ItsCrystalSkies", :target => "_blank" %></p>
+        <p><%= link_to "LinkedIn", "https://www.linkedin.com/in/dawsonaaron", :target => "_blank" %></p>
+        <p><%= link_to "GitHub", "https://github.com/Add9Sus4", :target => "_blank" %></p>
+        <p><%= link_to "SoundCloud", "https://soundcloud.com/crystalskies", :target => "_blank" %></p>
+        <p><%= link_to "YouTube", "https://www.youtube.com/channel/UCrU7NFCXQXT_sQ1-icRPcLA", :target => "_blank" %></p>
+        <p><%= link_to "WordPress", "https://add9sus4.wordpress.com/", :target => "_blank" %></p>
+        <p><strong>Currently working on:</strong></p>
+        <li> Developing a professional quality VST/AU plugin</li>
+        <li> Developing a baseball simulation web app in Rails</li>
+        <li> Finishing the Dichotomy EP (<%= link_to "Crystal Skies", "https://soundcloud.com/crystalskies", :target => "_blank" %>)</li>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div id="title"><h1>Aaron's Website</h1></div>
+      <div class="navbar"><%= render "nav" %></div>
+      <body>
+        <div id="content">
+        <%= yield %>
+        </div>
+      </body>
+      <div class="navbar"><%= render "nav" %></div>
+    </div>
+  </div>
+
+<style media="screen">
+
+body {
+  background-image:url('/assets/fabric_of_squares_gray.png');
+}
+
+#logo {
+  width:100%;
+  padding-top:10px;
+  /*-webkit-mask-image:-webkit-radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0));*/
+}
+
+#content {
+  min-height: 550px;
+}
+
+#sidebar {
+  padding-top:10px;
+}
+</style>
+
+</html>
