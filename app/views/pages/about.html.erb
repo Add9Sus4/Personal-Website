@@ -1,3 +1,7 @@
+<div id="selfieDiv" class="col-sm-3">
+  <%= image_tag("AaronPhoto.jpg", :id => "selfie") %>
+</div>
+<div>
 <h2>About me</h2>
 <p>I would love to say I've been coding for my whole life, but that just isn't true.
 I had never written a line of code until high school when I decided I wanted to try and
@@ -36,6 +40,14 @@ of Illenium's "With You".</p> I also recently completed an official
 for Zenhiser, containing the audio stems for 20 full original songs. At 10 GB of total audio, it was
 without a doubt one of the most challenging things I've done, but I grew a lot as a producer during
 the process, and hope to do more work like this in the future.
+</div>
+
+<style media="screen">
+  #selfie {
+    float: left;
+    width: 100%;
+  }
+</style>
 
 <script type="text/javascript">
 $(".nav").find(".active").removeClass("active");
