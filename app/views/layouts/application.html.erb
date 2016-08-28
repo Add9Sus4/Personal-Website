@@ -17,10 +17,11 @@
     <div id="leftSide" class="col-sm-2">
       <div id="logoDiv">
         <%= image_tag("crystalskies.jpg", :id => "logo") %>
+        <hr/>
       </div>
-    </br>
-      <div id="sidebar">
-        <p><strong>Social media links:</strong></p>
+
+      <div id="sidebar" class="textOnDarkBackground">
+        <h4><strong>Social media links:</strong></h4>
         <div id="share"></div>
         <p><%= link_to "Facebook", "https://www.facebook.com/aaron.dawson.902", :target => "_blank" %></p>
         <p><%= link_to "Twitter", "https://twitter.com/ItsCrystalSkies", :target => "_blank" %></p>
@@ -29,25 +30,27 @@
         <p><%= link_to "SoundCloud", "https://soundcloud.com/crystalskies", :target => "_blank" %></p>
         <p><%= link_to "YouTube", "https://www.youtube.com/channel/UCrU7NFCXQXT_sQ1-icRPcLA", :target => "_blank" %></p>
         <p><%= link_to "WordPress", "https://add9sus4.wordpress.com/", :target => "_blank" %></p>
-</br>
-        <p><strong>Currently working on:</strong></p>
-        <li> Developing a professional quality VST/AU plugin</li>
-        <li> Developing a baseball simulation web app in Rails</li>
-        <li> Finishing the Dichotomy EP (<%= link_to "Crystal Skies", "https://soundcloud.com/crystalskies", :target => "_blank" %>)</li>
+<hr/>
+        <h4><strong>Currently working on:</strong></h4>
+        <div id="currentlyWorkingOn">
+          <li> Developing a professional quality VST/AU plugin</li>
+          <li> Developing a baseball simulation web app in Rails</li>
+          <li> Finishing the Dichotomy EP (<%= link_to "Crystal Skies", "https://soundcloud.com/crystalskies", :target => "_blank" %>)</li>
+        </div>
       </div>
     </div>
-    <div id="mainDiv" class="col-sm-10">
-      <div id="title"><h1>Aaron's Website</h1></div>
-      <div class="navbar"><%= render "shared/nav" %></div>
+    <div id="mainDiv" class="col-sm-10 darkBackground">
+      <div id="title" class="textOnMediumBackground"><h1>Aaron's Website</h1></div>
+      <div class="myNav"><%= render "shared/nav" %></div>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
-      <body>
-        <div id="content">
+      <body class="mediumBackground">
+        <div id="content" class="lightBackground">
         <%= yield %>
         </div>
       </body>
-      <div class="navbar"><%= render "shared/nav" %></div>
+      <div class="myNav"><%= render "shared/nav" %></div>
     </div>
   </div>
 
@@ -55,31 +58,66 @@
 
 <style media="screen">
 
-body {
-  background-image:url('/assets/fabric_of_squares_gray.png');
+hr {
+  border-color: #bdccdb;
+  margin-right: 15px;
+  margin-left: -10px;
+}
+
+.textOnDarkBackground {
+  color: #bdccdb;
+}
+
+.textOnDarkBackground a {
+  color: #90b3d5;
+}
+
+.textOnMediumBackground {
+  color: #b5cce3;
+}
+
+.darkBackground {
+  background-color:	#3a5a78;
+}
+
+.mediumBackground {
+  background-color: #294056;
+}
+
+.lightBackground {
+  background-color: #bacdde;
+}
+
+#currentlyWorkingOn li {
+  padding-bottom: 15px;
 }
 
 
 #mainDiv {
   border-left: 2px solid #11263b;
   border-bottom: 2px solid #11263b;
-
   box-shadow: -5px 4px 10px -4px #11263b;
   border-right: 2px solid #11263b;
 }
 
 #logo {
   width:100%;
-  padding-top:10px;
+  padding-top: 20px;
+  padding-right: 5px;
+  margin-left: -10px;
   /*-webkit-mask-image:-webkit-radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0));*/
 }
 
 #content {
-  min-height: 550px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1px;
+  min-height: 600px;
+  border-radius: 3px;
 }
 
-#sidebar {
-  padding-top:10px;
+#title {
+  margin-top: -5px;
 }
 </style>
 
