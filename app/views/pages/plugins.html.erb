@@ -1,8 +1,32 @@
 <h2>VST/AU Plugins</h2>
-<p>Below is a list of the audio plugins I have developed:</p>
-<li>I haven't finished any plugins yet, but some are in the works as we speak!</li>
-<p/>
-<script type="text/javascript">
-$(".nav").find(".active").removeClass("active");
-$(".nav").find("#plugins").addClass("active");
-</script>
+<div class="scrollable-div">
+  <div class="plugin-text col-sm-12">
+    <p>I haven't finished any plugins yet, but here is one I have been working on recently.
+      It is a sampler that takes 6 samples at random from a folder, layers them, and adds different
+      effects to create a new sound. Future work includes improving the interface and
+      adding effects such as reverb, additional filter types, envelopes, LFOs, and perhaps
+      even granular synthesis, FM, or ring modulation.</p>
+
+    </div>
+    <div id="drumDesignerDiv" class="col-sm-2"><%= image_tag("DrumDesigner.png", :id => "drumDesigner") %></div>
+    <div class="plugin-text col-sm-12">
+
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(".nav").find(".active").removeClass("active");
+  $(".nav").find("#plugins").addClass("active");
+  </script>
+
+  <style media="screen">
+  #drumDesigner {
+    width: 600%;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-left: -15px;
+
+  }
+  .col-sm-12 {
+    margin-left: -15px;
+  }
+  </style>

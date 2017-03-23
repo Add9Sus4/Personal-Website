@@ -1,14 +1,27 @@
 <h2>Welcome to my website!</h2>
-<p>My name is Aaron Dawson, and I love to write code and make music.</p>
-<p>On this page you can find some of the audio software I have designed,
-as well as some other software I've worked on.</p>
-<p>Feel free to check out some of the music I've composed, and take a look at
-my blog, which covers all kinds of different topics surrounding, music, math, and coding!</p>
-<p>Also of note: I created and designed this website using Ruby on Rails! The site
-is hosted on Heroku, is backed by a PostgreSQL database, and makes use of
-some popular javascript frameworks (including Bootstrap and jQuery).</p>
-
+<p>My name is Aaron Dawson, and I enjoy writing code and composing music.</p>
+<p>On this page you can find some of the <%= link_to "audio software", pages_plugins_path %> I have designed,
+as well as some <%= link_to "other software", pages_software_path %> I've worked on.</p>
+<p>Feel free to check out some of the <%= link_to "music", "https://soundcloud.com/crystalskies", :target => "_blank" %> I've composed,
+  my <%= link_to "first sample pack with Zenhiser", "http://www.zenhiser.com/luminous-sample-pack-library.html", :target => "_blank" %>, or take a look at
+my <%= link_to "blog", "https://add9sus4.wordpress.com/", :target => "_blank" %>, which covers all kinds of different topics surrounding, music, math, and coding!</p>
+<p>Below are some screenshots of various software I've created:</p>
+<div class="scrollable-div2">
+<div class="col-md-6 col-sm-12"><%= image_tag("DrumDesigner.png", :class => "screenshot") %></div>
+<div class="col-md-6 col-sm-12"><%= image_tag("BaseballApp_Teams.jpg", :class => "screenshot") %></div>
+<div class="col-md-12 col-sm-12"><%= image_tag("SynthesizedConvolutionReverbGUI_2.jpg", :class => "screenshot") %></div>
+</div>
 <script type="text/javascript">
 $(".nav").find(".active").removeClass("active");
 $(".nav").find("#home").addClass("active");
 </script>
+
+<style>
+.screenshot {
+  width:100%;
+  padding-bottom: 5px;
+}
+.col-sm-12 {
+  margin-left: -15px;
+}
+</style>

@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script type='text/javascript' src='http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js'></script> -->
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>AddPersonalWebsite</title>
+    <div><title>Add9 Music and Coding</title></div>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,6 +18,7 @@
     <div id="leftSide" class="col-sm-2">
       <div id="logoDiv">
         <%= image_tag("crystalskies.jpg", :id => "logo") %>
+        <br><br><p class="textOnDarkBackground">adawson927@gmail.com</p>
         <hr/>
       </div>
 
@@ -25,22 +27,21 @@
         <div id="share"></div>
         <p><%= link_to "Facebook", "https://www.facebook.com/aaron.dawson.902", :target => "_blank" %></p>
         <p><%= link_to "Twitter", "https://twitter.com/ItsCrystalSkies", :target => "_blank" %></p>
-        <p><%= link_to "LinkedIn", "https://www.linkedin.com/in/dawsonaaron", :target => "_blank" %></p>
         <p><%= link_to "GitHub", "https://github.com/Add9Sus4", :target => "_blank" %></p>
         <p><%= link_to "SoundCloud", "https://soundcloud.com/crystalskies", :target => "_blank" %></p>
-        <p><%= link_to "YouTube", "https://www.youtube.com/channel/UCrU7NFCXQXT_sQ1-icRPcLA", :target => "_blank" %></p>
         <p><%= link_to "WordPress", "https://add9sus4.wordpress.com/", :target => "_blank" %></p>
 <hr/>
-        <h4><strong>Currently working on:</strong></h4>
+        <h4><strong>Project links:</strong></h4>
         <div id="currentlyWorkingOn">
-          <li> Developing a professional quality VST/AU plugin</li>
-          <li> Developing a <%= link_to "baseball simulation web app in Rails", "https://protected-refuge-42670.herokuapp.com/", :target => "_blank" %></li>
-          <li> Finishing the Dichotomy EP (<%= link_to "Crystal Skies", "https://soundcloud.com/crystalskies", :target => "_blank" %>)</li>
+          <li><%= link_to "Baseball Simulation", pages_software_path %></li>
+          <!-- <li><%= link_to 'download', pages_download_url %></li> -->
+          <li><%= link_to "NYU Master's Thesis", "https://add9sus4.wordpress.com/nyu-masters-thesis/", :target => "_blank" %>
+          <li><%= link_to "Drum Designer (VST/AU plugin currently in development)", pages_plugins_path %></li>
         </div>
       </div>
     </div>
     <div id="mainDiv" class="col-sm-10 darkBackground">
-      <div id="title" class="textOnMediumBackground"><h1>Aaron's Website</h1></div>
+      <div id="title" class="textOnMediumBackground"><h1>Add9 Music and Coding</h1></div>
       <div class="myNav"><%= render "shared/nav" %></div>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
@@ -81,7 +82,7 @@ hr {
 }
 
 .mediumBackground {
-  background-color: #294056;
+  background-color: #192734;
 }
 
 .lightBackground {
@@ -118,6 +119,23 @@ hr {
 
 #title {
   margin-top: -5px;
+  color: #bacdde;
+  text-shadow: 3px 3px 5px #192734;
+}
+.scrollable-div {
+  overflow: scroll;
+  height: 500px;
+}
+.scrollable-div2 {
+  overflow: scroll;
+  height: 390px;
+}
+.title_image {
+  width:64%;
+  height: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
 }
 </style>
 

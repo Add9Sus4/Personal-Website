@@ -1,9 +1,77 @@
 <h1>Software Projects</h1>
-<p>Below is a list of projects I've completed</p>
-<li>List to be updated soon; until then, check the repos on my
-<%= link_to "GitHub", "https://github.com/Add9Sus4", :target => "_blank" %> page!</li>
-<p/>
+<div class="scrollable-div">
+<p>Below is a project I have been working on for a while. It is a web application
+that simulates an entire baseball season with 30 teams, down to each individual pitch.</p>
+<p>Click <%= link_to "here", "https://protected-refuge-42670.herokuapp.com/teams", :target => "_blank" %> to check out the
+  website. Below are some screenshots:</p>
+<div class="col-md-6 col-sm-12">
+  <h2>Team Standings</h2>
+  <p> - Teams compete in divisions and leagues, just like the MLB.</p>
+  <div><%= image_tag("BaseballApp_Teams.jpg", :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Individual Team Page</h2>
+  <p> - Teams lineups and positions can be edited by the team owner.</p>
+  <div><%= image_tag('BaseballApp_TeamView.jpg', :class => "baseball") %><br><br><br></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Play-by-play</h2>
+  <p> - Full play-by-play, down to each individual pitch, for each game.
+  Don't worry, there are other pitch types besides fastball; it just isn't reflected in the play-by-play yet!</p>
+  <div><%= image_tag("BaseballApp_PlayByPlay.png", :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>League Leaders</h2>
+  <p> - League leaders page shows the top 10 players in several categories.
+  Batting top 10 not shown here, but also displayed on the page.</p>
+  <div><%= image_tag('BaseballApp_PitchingLeaders.png', :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Team Pitching Stats</h2>
+  <p> - Player stats can be viewed from the team page here. Batting stats not shown here,
+  but they are also displayed on the team page.</p>
+  <div><%= image_tag("BaseballApp_PitchingStats.png", :class => "baseball") %><br><br></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Team Schedule</h2>
+  <p> - A team's schedule can be viewed at a glance (at the bottom of the team page).</p>
+  <div><%= image_tag("BaseballApp_TeamSchedule.png", :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Player Page</h2>
+  <p> - View a player's skills and info on the player page.</p>
+  <div><%= image_tag('BaseballApp_Player.png', :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Game Batting</h2>
+  <p> - Line score and box score shown for every game.</p>
+  <div><%= image_tag('BaseballApp_GameBatting.png', :class => "baseball") %></div>
+</div>
+<div class="col-md-6 col-sm-12">
+  <h2>Game Pitching</h2>
+  <p> - Pitching stats also shown for every game.</p>
+  <div><%= image_tag("BaseballApp_GamePitching.png", :class => "baseball") %></div>
+</div>
+</div>
 <script type="text/javascript">
+//
+// $(document).ready(function(){
+//    jQuery.noConflict();
+// });
+
 $(".nav").find(".active").removeClass("active");
 $(".nav").find("#software").addClass("active");
 </script>
+
+<style media="screen">
+.baseball {
+  width:100%;
+  /*padding-top: 5px;
+  padding-right: 10px;
+  margin-left: -15px;*/
+
+}
+.col-md-12 {
+  /*margin-left: -15px;*/
+}
+</style>

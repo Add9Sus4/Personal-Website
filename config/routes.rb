@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'pages/download'
+
   get 'sessions/new'
 
   get 'users/new'
